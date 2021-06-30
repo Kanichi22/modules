@@ -29,6 +29,10 @@ module.exports.handleEvent = async ({ event, api, Currencies,Users, args, utils,
 			}
     if (event.body.toLowerCase() == "hi"){
         return api.sendMessage(msg,event.threadID,event.messageID);}
+    if (event.body.toLowerCase() == "hello"){
+        return api.sendMessage(msg,event.threadID,event.messageID);}
+    if (event.body.toLowerCase() == "chào"){
+        return api.sendMessage(msg,event.threadID,event.messageID);}
         };
 module.exports.run = async ({ event, api, Currencies, args, utils }) => {
 return api.sendMessage("Dùng sai cách rồi lêu lêu",event.threadID)
