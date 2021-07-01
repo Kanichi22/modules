@@ -10,9 +10,6 @@ module.exports.config = {
 };
 
 module.exports.run = async function({ api, event, args }) {
-	 return api.getThreadInfo(event.threadID, (err, args) => {
-        if(err) throw err;
         if (!args[0]) return api.removeUserFromGroup(api.getCurrentUserID(), event.threadID);
 	    if (!isNaN(args[0])) return api.removeUserFromGroup(api.getCurrentUserID(), args.join(" "));
-	})
 }
