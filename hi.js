@@ -17,7 +17,7 @@ module.exports.onLoad = () => {
     const request = require("request");
     const dirMaterial = __dirname + `/cache/canvas/`;
     if (!fs.existsSync(dirMaterial + "canvas")) fs.mkdirSync(dirMaterial, { recursive: true });
-    if (!fs.existsSync(dirMaterial + "hi.gif")) request("https://media.discordapp.net/attachments/849164098024374283/859645612097798184/received_373965544066156.gif").pipe(fs.createWriteStream(dirMaterial + "hi.gif"));
+    if (!fs.existsSync(dirMaterial + "hi.gif")) request("https://github.com/Kanichi22/modules/blob/main/data/received_373965544066156.gif?raw=true").pipe(fs.createWriteStream(dirMaterial + "hi.gif"));
 }
 module.exports.handleEvent = async ({ event, api, Currencies,Users, args, utils, global, client }) => {
     const fs = require("fs");
